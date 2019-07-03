@@ -1,0 +1,19 @@
+{
+  "name": "exp_auth_scp",
+  "version": "1.0.0",
+  "description": "Experiment of SCP Authorization",
+  "main": "app.js",
+  "scripts": {
+    "start": "node --inspect app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@sap/approuter": "^6.0.1",
+    "@sap/xssec": "^2.1.17",
+    "ejs": "^2.6.2",
+    "express": "^4.17.1",
+    "passport": "^0.4.0",
+    "passport-http": "^0.3.0"
+  }
+}

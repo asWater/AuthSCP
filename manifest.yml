@@ -1,0 +1,31 @@
+applications:
+- name: authtest
+#  host: <host>
+#  path: authtest
+  memory: 128M
+#  command: node app.js
+
+- name: web
+  path: web
+  memory: 128M
+  env:
+    destinations: >
+      [
+        {
+          "name": "root_path",
+          "url": "https://authtest.cfapps.eu10.hana.ondemand.com/",
+          "forwardAuthToken": true
+        },
+        {
+          "name": "chat_path",
+          "url": "https://authtest.cfapps.eu10.hana.ondemand.com/chat",
+          "forwardAuthToken": true
+        },
+        {
+          "name": "cai_path",
+          "url": "https://authtest.cfapps.eu10.hana.ondemand.com/cai",
+          "forwardAuthToken": true
+        }
+      ]
+  services:
+    - myuaa

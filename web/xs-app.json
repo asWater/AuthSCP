@@ -1,0 +1,28 @@
+{
+  "authenticationMethod": "route",
+  "welcomeFile": "resources/index.html",
+  "routes": [
+    {
+      "source": "^/resources(.*)$",
+      "target": "$1",
+      "localDir": "resources"
+    },
+    {
+      "source": "^/chat(.*)$",
+      "target": "$1",
+      "destination": "chat_path",
+      "authenticationType": "xsuaa"
+    },
+    {
+      "source": "^/cai(.*)$",
+      "target": "$1",
+      "destination": "cai_path",
+      "authenticationType": "none"
+    },
+    {
+      "source": "^/(.*)$",
+      "target": "$1",
+      "destination": "root_path"
+    }
+  ]
+}
